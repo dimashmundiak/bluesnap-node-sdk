@@ -1,0 +1,18 @@
+{
+  "name": "bluesnap-node-sdk",
+  "version": "1.0.0",
+  "description": "BlueSnap SDK for Node.JS",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "request": "^2.87.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
