@@ -1,5 +1,4 @@
 const config = require('./config');
-const planService = require('./lib/planService');
 
 class BlueSnapSDK {
 
@@ -19,21 +18,16 @@ class BlueSnapSDK {
         config.ApiPassword = apiPassword;
         config.MerchantId = merchantId;
         config.StoreId = storeId;
-
-
-        planService.getPlanList()
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.log(error);
-            });
     }
 
+    get planService() {
+        return require('./lib/planService');
+    }
 
-
-
+    get subscriptionService(){
+        return require('./lib/subscriptionService');
+    }
 
 }
 
-let test = new BlueSnapSDK('API_153183198573083631056', 'BlueSnapSB1', '581109', '42395');
+module.exports = BlueSnapSDK;

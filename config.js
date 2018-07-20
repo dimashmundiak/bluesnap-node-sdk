@@ -22,7 +22,6 @@ module.exports = class Config {
         _apiPassword = value;
     }
 
-
     static get authToken() {
         let dataString = `${this.ApiUsername}:${this.ApiPassword}`;
         let authToken = new Buffer(dataString).toString('base64');
@@ -50,6 +49,5 @@ module.exports = class Config {
     static get ServerUrl() {
         return SERVER_URL;
     }
-
 
 }
